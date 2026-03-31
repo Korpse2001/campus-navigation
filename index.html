@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Building Navigator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button id="homeBtn" class="btn btn-secondary home-btn" aria-label="Go to home screen">Home</button>
+                    <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                        <line x1="9" y1="6" x2="15" y2="6"></line>
+                        <line x1="9" y1="10" x2="15" y2="10"></line>
+                        <line x1="9" y1="14" x2="15" y2="14"></line>
+                        <line x1="9" y1="18" x2="15" y2="18"></line>
+                    </svg>
+                    <div>
+                        <h1 class="header-title">Campus Building Navigator</h1>
+                        <p class="header-subtitle">Find your way to any room in the building</p>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <div class="input-wrapper">
+                        <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search for a room (e.g., CR101, Library)"
+                        >
+                    </div>
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="quick-access">
+                    <p class="quick-access-label">Quick access:</p>
+                    <div id="quickAccessButtons" class="quick-access-buttons"></div>
+                </div>
+            </div>
+
+            <!-- Not Found Alert -->
+            <div id="notFoundAlert" class="alert alert-error" style="display: none;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>Room not found. Please check the room number and try again.</span>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" style="display: none;">
+                <!-- Navigation Info Card -->
+                <div class="card navigation-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Room Location
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-row">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <line x1="9" y1="6" x2="15" y2="6"></line>
+                                <line x1="9" y1="10" x2="15" y2="10"></line>
+                                <line x1="9" y1="14" x2="15" y2="14"></line>
+                            </svg>
+                            <div>
+                                <p id="roomName" class="room-name"></p>
+                                <p id="roomId" class="room-id"></p>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                            </svg>
+                            <div>
+                                <p class="info-label">Navigation</p>
+                                <p id="roomNavigation" class="room-navigation"></p>
+                            </div>
+                        </div>
+                        <div id="roomDescriptionSection" class="room-description" style="display: none;">
+                            <p id="roomDescription"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floor Map Card -->
+                <div class="card map-card">
+                    <div class="card-content">
+                        <h3 id="floorMapTitle" class="map-title"></h3>
+                        <div class="map-container">
+                            <img id="floorMapImage" src="" alt="Floor map" class="map-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Section -->
+            <div id="welcomeSection" class="welcome-section">
+                <svg class="icon icon-xl welcome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                    <line x1="9" y1="6" x2="15" y2="6"></line>
+                    <line x1="9" y1="10" x2="15" y2="10"></line>
+                    <line x1="9" y1="14" x2="15" y2="14"></line>
+                    <line x1="9" y1="18" x2="15" y2="18"></line>
+                </svg>
+                <h2 class="welcome-title">Welcome to Campus Building Navigator</h2>
+                <p class="welcome-subtitle">Search for a room to view its location and floor map</p>
+                <div class="rooms-grid-container">
+                    <h3 class="rooms-grid-title">Available Rooms:</h3>
+                    <div id="roomsGrid" class="rooms-grid"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
