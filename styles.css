@@ -315,22 +315,33 @@ body.light-theme .rooms-grid-title {
 
 .search-bar {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
 }
 
 .home-btn {
     min-width: 80px;
-    padding: 10px 16px;
+    padding: 10px 14px;
     font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 .input-wrapper {
     flex: 1;
-    min-width: 280px;
+    min-width: 250px;
     position: relative;
+}
+
+.theme-toggle {
+    padding: 10px 14px !important;
+    min-width: 50px !important;
+    flex-shrink: 0;
+}
+
+.btn-primary {
+    flex-shrink: 0;
 }
 
 .search-input {
@@ -667,10 +678,11 @@ body.light-theme .rooms-grid-title {
 
     .search-bar {
         flex-direction: column;
+        gap: 10px;
     }
 
     .input-wrapper {
-        min-width: 100%;
+        width: 100%;
     }
 
     .search-actions {
@@ -736,41 +748,27 @@ body.light-theme .rooms-grid-title {
         font-size: 0.78rem;
     }
 
-    .theme-toggle {
-        position: static;
-        margin: 0;
-        padding: 8px 10px !important;
-        min-width: auto !important;
-    }
-
     .search-bar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .input-wrapper {
-        width: 100%;
-    }
-
-    .search-actions {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
-        width: 100%;
     }
 
-    .search-actions .home-btn {
-        min-width: auto;
-        padding: 8px 10px;
-        font-size: 0.75rem;
+    .home-btn {
+        grid-column: 1;
     }
 
-    .search-actions .theme-toggle {
-        padding: 8px 10px !important;
-        font-size: 0.9rem;
-    }
-
-    .search-actions .btn-primary {
+    .input-wrapper {
         grid-column: 1 / -1;
+    }
+
+    .theme-toggle {
+        grid-column: 1;
+        padding: 8px 10px !important;
+        min-width: auto;
+    }
+
+    .btn-primary {
+        grid-column: 2;
     }
 }
