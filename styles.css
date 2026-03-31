@@ -180,18 +180,39 @@ body.light-theme .rooms-grid-title {
 }
 
 .icon-lg {
-    width: 28px !important;
-    height: 28px !important;
+    width: 42px !important;
+    height: 42px !important;
 }
 
 .icon-xl {
-    width: 48px !important;
-    height: 48px !important;
+    width: 56px !important;
+    height: 56px !important;
 }
 
 .icon.room-card-icon {
     width: 32px !important;
     height: 32px !important;
+}
+
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.theme-btn {
+    min-width: 84px;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: inherit;
+}
+
+.theme-btn:hover, .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
 }
 
 /* Header */
