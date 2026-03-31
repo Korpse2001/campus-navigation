@@ -8,25 +8,25 @@ const roomsData =
         floor: 'Ground Floor',
         navigation: 'Enter main entrance → Turn left → Straight 20m → Room on right',
         description: 'Main lecture hall with projector and 60 seats.',
-        map: 'https://via.placeholder.com/800x400/4f46e5/ffffff?text=Ground+Floor+Map'
+        map: ''
     },
     'CR205': 
     {
         name: 'Classroom 205',
         id: 'CR205',
-        floor: '2nd Floor',
-        navigation: 'Main entrance → Stairs/Elevator to 2nd floor → Turn right → Room 205',
+        floor: '1nd Floor',
+        navigation: 'Back wing → Stairs/Elevator to 1nd floor → Turn right → Room 205',
         description: 'Computer lab with 30 workstations.',
-        map: 'https://via.placeholder.com/800x400/7c3aed/ffffff?text=2nd+Floor+Map'
+        map: ''
     },
     'LIB': 
     {
         name: 'Main Library',
-        id: 'LIB001',
+        id: 'LIB',
         floor: 'Ground Floor',
         navigation: 'Main entrance → Straight through lobby → Library entrance on left',
         description: 'Central library with 500+ seats and study areas.',
-        map: 'https://via.placeholder.com/800x400/10b981/ffffff?text=Library+Map'
+        map: ''
     },
     'Exam Office': 
     {
@@ -35,16 +35,16 @@ const roomsData =
         floor: 'Basement',
         navigation: 'Gate no.1->Side Entrance->Stairs to Basement->stright from Fee cell',
         description: 'For the exam related quarry.',
-        map: 'https://via.placeholder.com/800x400/f59e0b/ffffff?text=3rd+Floor+Map'
+        map: ''
     },
-    'LAB112': 
+    'LAB 1': 
     {
-        name: 'Science Lab 112',
-        id: 'LAB112',
-        floor: '1st Floor',
-        navigation: 'Main entrance → Stairs to 1st floor → Right at corridor → Lab 112',
-        description: 'Chemistry and Physics laboratory.',
-        map: 'https://via.placeholder.com/800x400/ef4444/ffffff?text=1st+Floor+Map'
+        name: 'Computer Lab 1',
+        id: 'LAB 1',
+        floor: 'Ground Floor',
+        navigation: 'Backwing entrance → Right at corridor → Lab 1',
+        description: 'Computer Lab 1.',
+        map: ''
     }
 };
 
@@ -205,7 +205,7 @@ function createRoomsGrid() {
 function createQuickAccess() 
 {
     quickAccessButtons.innerHTML = '';
-    const quickRooms = ['CR101', 'CR205','Exam Office', 'LAB112', 'LIB'];
+    const quickRooms = ['CR101', 'CR205','Exam Office', 'LAB 1', 'LIB'];
     quickRooms.forEach(roomKey => {
         const room = resolveRoom(roomKey);
         if (!room) return;
