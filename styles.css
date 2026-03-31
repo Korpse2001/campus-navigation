@@ -228,10 +228,9 @@ body.light-theme .rooms-grid-title {
     padding: 0.65rem 1rem;
     font-size: 0.9rem;
     border-radius: 12px;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: static !important;
+    transform: none !important;
+    margin-right: 8px;
 }
 
 .header-title {
