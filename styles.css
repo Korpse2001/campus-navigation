@@ -673,6 +673,18 @@ body.light-theme .rooms-grid-title {
         min-width: 100%;
     }
 
+    .search-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .search-actions .btn {
+        flex: 1 1 calc(50% - 4px);
+        min-width: 70px;
+    }
+
     .rooms-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -725,9 +737,40 @@ body.light-theme .rooms-grid-title {
     }
 
     .theme-toggle {
-        position: absolute;
-        right: 14px;
-        top: 12px;
+        position: static;
         margin: 0;
+        padding: 8px 10px !important;
+        min-width: auto !important;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    .search-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .search-actions .home-btn {
+        min-width: auto;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .search-actions .theme-toggle {
+        padding: 8px 10px !important;
+        font-size: 0.9rem;
+    }
+
+    .search-actions .btn-primary {
+        grid-column: 1 / -1;
     }
 }
