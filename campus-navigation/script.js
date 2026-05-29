@@ -1,5 +1,5 @@
 // Room data comes from the backend server.
-const API_URL = 'http://localhost:5000/api/rooms';
+const API_URL = 'https://campus-navigation-ljmh.onrender.com/';
 let roomsData = {};
 
 async function loadRooms() {
