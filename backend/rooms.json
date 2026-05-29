@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Classroom 101",
+    "id": "CR101",
+    "floor": "Ground Floor",
+    "navigation": "Enter main entrance → Turn left → Straight 20m → Room on right",
+    "description": "Main lecture hall with projector and 60 seats.",
+    "map": ""
+  },
+  {
+    "name": "Classroom 205",
+    "id": "CR205",
+    "floor": "1st Floor",
+    "navigation": "Back wing → Stairs/Elevator to 1st floor → Turn right → Room 205",
+    "description": "Computer lab with 30 workstations.",
+    "map": ""
+  },
+  {
+    "name": "Main Library",
+    "id": "LIB",
+    "floor": "Ground Floor",
+    "navigation": "Main entrance → Straight through lobby → Library entrance on left",
+    "description": "Central library with 500+ seats and study areas.",
+    "map": ""
+  },
+  {
+    "name": "Exam Office",
+    "id": "EXAM",
+    "floor": "Basement",
+    "navigation": "Gate no.1 → Side Entrance → Basement → Straight from Fee Cell",
+    "description": "For exam related queries.",
+    "map": ""
+  },
+  {
+    "name": "Computer Lab 1",
+    "id": "LAB1",
+    "floor": "Ground Floor",
+    "navigation": "Back wing entrance → Right at corridor → Lab 1",
+    "description": "Computer laboratory.",
+    "map": ""
+  }
+]
