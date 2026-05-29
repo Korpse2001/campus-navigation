@@ -5,7 +5,7 @@
     "floor": "Ground Floor",
     "navigation": "Enter main entrance → Turn left → Straight 20m → Room on right",
     "description": "Main lecture hall with projector and 60 seats.",
-    "map": "cr101.png"
+    "map": "BG.jpeg"
   },
   {
     "name": "Classroom 205",
@@ -13,7 +13,7 @@
     "floor": "1st Floor",
     "navigation": "Back wing → Stairs/Elevator to 1st floor → Turn right → Room 205",
     "description": "Computer lab with 30 workstations.",
-    "map": ""
+    "map": "BG.jpeg"
   },
   {
     "name": "Main Library",
@@ -37,6 +37,6 @@
     "floor": "Ground Floor",
     "navigation": "Back wing entrance → Right at corridor → Lab 1",
     "description": "Computer laboratory.",
-    "map": ""
+    "map": "BG.jpeg"
   }
 ]
