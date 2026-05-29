@@ -5,7 +5,7 @@
     "floor": "Ground Floor",
     "navigation": "Enter main entrance → Turn left → Straight 20m → Room on right",
     "description": "Main lecture hall with projector and 60 seats.",
-    "map": ""
+    "map": "cr101.png"
   },
   {
     "name": "Classroom 205",
